@@ -1,0 +1,50 @@
+.game-board {
+    background-image: url('../assets/board.gif');
+    border: 1px solid silver;
+    border-radius: 8px;
+    border-collapse: initial;
+}
+
+.game-board td {
+    width: 42px;
+    height: 42px;
+    position: relative;
+    border: 1px solid rgba(0,0,255,0.3);
+    border-radius: 4px;
+    opacity: 1;
+    transition: border-color .3s,background-color .3s,opacity .3s;
+}
+
+.game-board.opponent {
+    cursor: pointer;
+}
+
+.on-board {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.shot {
+    cursor: default;
+}
+
+.shot.miss {
+    background-image: url('../assets/miss.png');
+    background-size: 42px 42px;
+    background-position: 42px 42px;
+}
+
+.shot.hit::before {
+    content: '';
+    width: 42px;
+    height: 42px;
+    background-image: url('../assets/hit.png');
+    background-size: 42px 42px;
+    background-position: 0px 42px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}

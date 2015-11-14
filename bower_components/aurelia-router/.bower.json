@@ -1,0 +1,36 @@
+{
+  "name": "aurelia-router",
+  "version": "0.12.0",
+  "description": "A powerful client-side router.",
+  "keywords": [
+    "aurelia",
+    "router"
+  ],
+  "homepage": "http://aurelia.io",
+  "license": "MIT",
+  "authors": [
+    "Rob Eisenberg <rob@bluespire.com> (http://robeisenberg.com/)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/aurelia/router"
+  },
+  "dependencies": {
+    "aurelia-dependency-injection": "^0.10.0",
+    "aurelia-event-aggregator": "^0.8.0",
+    "aurelia-history": "^0.7.0",
+    "aurelia-logging": "^0.7.0",
+    "aurelia-path": "^0.9.0",
+    "aurelia-route-recognizer": "^0.7.0",
+    "core-js": "zloirock/core-js"
+  },
+  "_release": "0.12.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.12.0",
+    "commit": "565ea405991afc123c715670158ca5f1b8b299c6"
+  },
+  "_source": "git://github.com/aurelia/router.git",
+  "_target": "^0.12.0",
+  "_originalSource": "aurelia-router"
+}

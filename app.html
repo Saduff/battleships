@@ -1,0 +1,94 @@
+<template>
+    <require from="game-board"></require>
+
+    <nav class="ui fixed inverted menu">
+        <div class="ui container">
+            <span class="header item display-desktop">Battleships</span>
+            <div ref="gridSizeSelect" class="ui compact dropdown labeled item">
+                <input type="hidden" name="gridSize" value="${gridSize.value}">
+                <span class="text">${gridSize.value}</span>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <div class="header">Grid Size</div>
+                    <div class="divider"></div>
+                    <div class="item" repeat.for="gridSize of gridSizes" data-value="${gridSize.value}">
+                        ${gridSize.label}
+                    </div>
+                </div>
+            </div>
+            <div ref="numShipsSelect" class="ui compact dropdown labeled item mr20-desktop">
+                <input type="hidden" name="numShips" value="${numShips}">
+                <span class="text">${numShips}</span>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <div class="header">Number of Ships</div>
+                    <div class="divider"></div>
+                    <div class="item" repeat.for="option of numShipsOptions" data-value="${option}">
+                        ${option}
+                    </div>
+                </div>
+            </div>
+            <button class="ui secondary button" click.trigger="newGame()">New Game</button>
+            <button class="ui primary button"
+                    click.trigger="placeRandomly()" show.bind="game.newGame">Place Randomly
+            </button>
+            <button class="ui positive button"
+                    click.trigger="startGame()" show.bind="game.newGame">Start Game
+            </button>
+        </div>
+    </nav>
+    <div class="main ui stackable centered grid">
+        <div style="margin-bottom: 25px;" show.bind="!game.shipsPlaced">
+            <h3 class="ui header">Place your ships</h3>
+            <div class="ship-2 draggable mobile-lf" repeat.for="i of game.numShips"
+                 jquery.draggable="snap: .game-col; revert: invalid; stop.call: $parent.dragStop($event)"
+                 data-num="${i}">
+            </div>
+        </div>
+        <div style="margin-bottom: 25px;" show.bind="!game.newGame">
+            <h2 class="ui header">Opponent's ships</h2>
+            <game-board ref="opponentBoard" game.bind="game" opponent="true"></game-board>
+        </div>
+        <div class="mr20-desktop" style="margin-bottom: 25px;">
+            <h2 class="ui header">Your ships</h2>
+            <game-board ref="playerBoard" game.bind="game"></game-board>
+        </div>
+        <div>
+            <h3 class="ui header">Game results (last 10)</h3>
+            <table class="ui unstackable celled table">
+                <thead>
+                    <th>Grid Size</th>
+                    <th>Number of Ships</th>
+                    <th>Your Shot Count</th>
+                    <th>Opponent Shot Count</th>
+                    <th>Game Time (s)</th>
+                    <th>Winner</th>
+                </thead>
+                <tbody>
+                    <tr repeat.for="gameResult of gameResults">
+                        <td class="center aligned">${gameResult.gridSize}</td>
+                        <td class="center aligned">${gameResult.numShips}</td>
+                        <td class="center aligned">${gameResult.playerShots}</td>
+                        <td class="center aligned">${gameResult.opponentShots}</td>
+                        <td class="center aligned">${gameResult.gameTime}</td>
+                        <td class="center aligned">${gameResult.winner}</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr class="active center aligned">
+                        <td></td><td></td>
+                        <td>${gameStats.playerShots}</td>
+                        <td>${gameStats.opponentShots}</td>
+                        <td>${gameStats.gameTime}</td>
+                        <td>${gameStats.winRatio}</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="game-result" if.bind="!game.newGame && game.gameOver">
+            <h1 ref="gameResult" class="${game.playerWon === true ? 'win' : game.playerWon === false ? 'loss' : ''}">
+                ${game.playerWon === true ? 'You Win!' : game.playerWon === false ? 'You Lose!' : ''}
+            </h1>
+        </div>
+    </div>
+</template>

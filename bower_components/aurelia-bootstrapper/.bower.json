@@ -1,0 +1,43 @@
+{
+  "name": "aurelia-bootstrapper",
+  "version": "0.17.0",
+  "description": "Sets up the default configuration for the aurelia framework and gets you up and running quick and easy.",
+  "keywords": [
+    "aurelia",
+    "bootstrapper",
+    "spa"
+  ],
+  "homepage": "http://aurelia.io",
+  "license": "MIT",
+  "authors": [
+    "Rob Eisenberg <rob@bluespire.com> (http://robeisenberg.com/)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/aurelia/bootstrapper"
+  },
+  "dependencies": {
+    "aurelia-event-aggregator": "^0.8.0",
+    "aurelia-framework": "^0.16.0",
+    "aurelia-history": "^0.7.0",
+    "aurelia-history-browser": "^0.8.0",
+    "aurelia-loader-default": "^0.10.0",
+    "aurelia-logging-console": "^0.7.1",
+    "aurelia-router": "^0.12.0",
+    "aurelia-templating": "^0.15.0",
+    "aurelia-templating-binding": "^0.15.0",
+    "aurelia-templating-resources": "^0.15.0",
+    "aurelia-templating-router": "^0.16.0",
+    "core-js": "zloirock/core-js"
+  },
+  "_release": "0.17.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.17.0",
+    "commit": "b5b7837148eaa7bb791f8368f9c69f26f9e16594"
+  },
+  "_source": "git://github.com/aurelia/bootstrapper.git",
+  "_target": "~0.17.0",
+  "_originalSource": "aurelia-bootstrapper",
+  "_direct": true
+}

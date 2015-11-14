@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+html {
+    font-size: 10px;
+}
+
+.ui.button, .ui.table {
+    font-size: 1rem;
+}
+
+div.main {
+    padding-top: 5.5rem !important;
+}
+
+.ship-2 {
+    width: 82px;
+    height: 40px;
+    background-image: url(../assets/ships.png);
+    background-position: -631px 41px;
+    background-size: 756px 84px;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.draggable {
+    cursor: move;
+}
+
+.game-result {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    pointer-events: none;
+}
+
+.game-result > * {
+    font-family: 'Roboto', sans-serif;
+    font-size: 6rem;
+    font-weight: 400;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-animation-fill-mode: forwards !important;
+    -moz-animation-fill-mode: forwards !important;
+    animation-fill-mode: forwards !important;
+    z-index: 999;
+    pointer-events: none;
+}
+
+.game-result .win {
+    color: #70f367;
+    background-image: -webkit-linear-gradient(92deg, #70f367, #4efeef);
+    -webkit-animation: bounceInUp 600ms, flip 1s, rubberBand 1s, fadeOut 1s;
+    -webkit-animation-delay: 0s, 600ms, 1.5s, 2.3s;
+    -moz-animation: bounceInUp 600ms, flip 1s, rubberBand 1s, fadeOut 1s;
+    -moz-animation-delay: 0s, 600ms, 1.5s, 2.3s;
+    animation: bounceInUp 600ms, flip 1s, rubberBand 1s, fadeOut 1s;
+    animation-delay: 0s, 600ms, 1.5s, 2.3s;
+}
+
+.game-result .loss {
+    color: #f31f2e;
+    background-image: -webkit-linear-gradient(92deg, #f31f2e, #fe8d24);
+    -webkit-animation: bounceInUp 600ms, hinge 2s;
+    -webkit-animation-delay: 0s, 1.2s;
+    -moz-animation: bounceInUp 600ms, hinge 2s;
+    -moz-animation-delay: 0s, 1.2s;
+    animation: bounceInUp 600ms, hinge 2s;
+    animation-delay: 0s, 1.2s;
+}
+
+.display-desktop {
+    display: none !important;
+}
+
+.mobile-lf {
+    float: left;
+}
+
+/* Tablet and larger */
+@media only screen and (min-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+
+    .mr20-desktop {
+        margin-right: 20px;
+    }
+
+    .display-desktop {
+        display: flex !important;
+    }
+
+    .mobile-lf {
+        float: none;
+    }
+}

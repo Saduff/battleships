@@ -1,0 +1,34 @@
+{
+  "name": "aurelia-templating-binding",
+  "version": "0.15.0",
+  "description": "An implementation of the templating engine's Binding Language abstraction which uses a pluggable command syntax.",
+  "keywords": [
+    "aurelia",
+    "templating",
+    "html",
+    "databinding"
+  ],
+  "homepage": "http://aurelia.io",
+  "license": "MIT",
+  "authors": [
+    "Rob Eisenberg <rob@bluespire.com> (http://robeisenberg.com/)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/aurelia/templating-binding"
+  },
+  "dependencies": {
+    "aurelia-binding": "^0.9.0",
+    "aurelia-logging": "^0.7.0",
+    "aurelia-templating": "^0.15.0"
+  },
+  "_release": "0.15.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.15.0",
+    "commit": "b5e30d165d6e80fb91bdc4f9579b3c2aa8caa3d1"
+  },
+  "_source": "git://github.com/aurelia/templating-binding.git",
+  "_target": "^0.15.0",
+  "_originalSource": "aurelia-templating-binding"
+}

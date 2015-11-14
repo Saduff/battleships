@@ -1,0 +1,32 @@
+{
+  "name": "Battleships Game",
+  "version": "1.0",
+  "authors": [
+    "Saduff <saduff3950@gmail.com>"
+  ],
+  "description": "A battleships game written in JavaScript and powered by Aurelia and Semantic UI",
+  "main": "index.html",
+  "keywords": [
+	"battleships",
+    "aurelia",
+    "es5",
+    "requirejs",
+    "bower"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.20",
+    "text": "https://github.com/requirejs/text.git#~2.0.14",
+    "jquery": "~2.1.4",
+    "aurelia-bootstrapper": "~0.17.0",
+    "aurelia-http-client": "~0.11.0",
+    "semantic": "semantic-ui#~2.1.4"
+  }
+}

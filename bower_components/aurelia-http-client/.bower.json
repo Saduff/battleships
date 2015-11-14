@@ -1,0 +1,33 @@
+{
+  "name": "aurelia-http-client",
+  "version": "0.11.0",
+  "description": "A simple, restful, message-based wrapper around XMLHttpRequest.",
+  "keywords": [
+    "aurelia",
+    "http",
+    "ajax"
+  ],
+  "homepage": "http://aurelia.io",
+  "license": "MIT",
+  "authors": [
+    "Rob Eisenberg <rob@bluespire.com> (http://robeisenberg.com/)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/aurelia/http-client"
+  },
+  "dependencies": {
+    "aurelia-path": "^0.9.0",
+    "core-js": "zloirock/core-js"
+  },
+  "_release": "0.11.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.11.0",
+    "commit": "2b0980669f4916038db5c403e3bdb54a8a574600"
+  },
+  "_source": "git://github.com/aurelia/http-client.git",
+  "_target": "~0.11.0",
+  "_originalSource": "aurelia-http-client",
+  "_direct": true
+}

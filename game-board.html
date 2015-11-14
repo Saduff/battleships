@@ -1,0 +1,14 @@
+<template>
+    <require from="droppable"></require>
+    <link rel="stylesheet" type="text/css" href="styles/game-board.css">
+
+    <table class="game-board ${opponent ? 'opponent' : ''}">
+        <tr repeat.for="i of game.gridSize" class="game-row row${i}" data-row="${i}">
+            <td repeat.for="j of $parent.game.gridSize" class="game-col col${j}" data-col="${j}"
+                click.trigger="$parent.$parent.shoot($event)">
+                <div class="ship-2 on-board" style="display: none;"></div>
+                <droppable game.bind="$parent.$parent.game"></droppable>
+            </td>
+        </tr>
+    </table>
+</template>
